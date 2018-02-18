@@ -31,7 +31,7 @@ Since we are talking about a decentralized exchange service, anyone could potent
 * It needs to be independent and fully transparent about its operations. 
 
 
-*There may be legal and regulatory complications. What kind of issues will arise?*
+*There may be legal and regulatory complications. What kind of complications?*
 * Does an AAE need a legal entity? Business or non-profit/foundation? 
 * Will an AAE need to be KYC/AML compliant?
 
@@ -42,10 +42,11 @@ Option 1. It could provide an order-matching website where people can submit req
 * People could pay to create an account on this website.
 * People could pay the AAE to list a swap request on the website.
 
-Option 2. It could provide a platform to negotiate the molecular swap agreements. 
-* People could pay the AAE if they come to an agreement
+Option 2. It could provide a platform to negotiate the molecular swap agreements.
+* People could pay to create an account on this platform.
+* People could pay the AAE if they start negotiating.
+* People could pay the AAE if they come to an agreement.
 
 Option 3. It could take a certain percentage in fees on the transactions that go through its bank account.
 
-
-*Is it even desirable for an AAE to be profit driven? It could rely on donations.*
+Option 4. It could fully rely on donations.
