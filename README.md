@@ -19,3 +19,30 @@ When the payment of Alice passes, it shows up in the logs of the AAE database. T
 The script on the AAE server uses the unique key to validate that the smart contract initiated the transaction (using the API from dcrdata), to be sure that the contract did not expire. The script then uses the bank account number that Alice provided in the reference to generate a new payment. The transacted amount is the same as the AAE received (if Alice paid more, Bob receives more). In the case that the validation fails, the payment returns to sender.
 
 If everything executed correctly, Alice now has 10 DCR and Bob has 720 EUR in his account. 
+
+# Open questions
+Since we are talking about a decentralized exchange service, anyone could potentially set up an AAE. The process of setting it up would be similar to that of setting up a stakepool. The code and requirements would be open-source and available to everyone who wants to contribute or audit. However, before we write code there are some questions to answer.
+
+
+*Keeping an AAE up and running is costly. What are its major expenses?*
+* It needs to pay the monthly expenses of a public bank account.
+* It needs to maintain a secure and publicly available database. 
+* It needs to upkeep a secure (virtual) server running an auditable script.
+* It needs to be independent and fully transparent about its operations. 
+
+
+*There may be legal and regulatory complications. What kind of issues will arise?*
+* Does an AAE need a legal entity? Business or non-profit/foundation? 
+* Will an AAE need to be KYC/AML compliant?
+
+
+*How can the AAE make a profit?* 
+Option 1. It could provide an order-matching website where people can submit requests for molecular swaps. 
+* People could pay to create an account on this website.
+* People could pay the AAE to list a swap request on the website.
+Option 2. It could provide a platform to negotiate the molecular swap agreements. 
+* People could pay the AAE if they come to an agreement
+Option 3. It could take a certain percentage in fees on the transactions that go through its bank account.
+
+
+*Is it even desirable for an AAE to be profit driven? It could rely on donations.*
