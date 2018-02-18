@@ -28,18 +28,19 @@ If everything executed correctly, Alice now has 10 DCR and Bob has 720 EUR in hi
 ## Open questions
 Since we are talking about a decentralized exchange service, anyone could potentially set up an AAE. The process of setting it up would be similar to that of setting up a stakepool. The code and requirements would be open-source and available to everyone who wants to contribute or audit. However, before we write code there are some questions to answer.
 
+*What if Alice tries to revoke the payment after it showed up in the AAE database?*
+
+*How can we make the AAE secure to prevent hackers from exploiting molecular swaps?*
+
+*There may be legal and regulatory complications. What kind of complications?*
+* Does an AAE need a legal entity? Business or non-profit/foundation? 
+* Will an AAE need to be KYC/AML compliant?
 
 *Keeping an AAE up and running is costly. What are its major expenses?*
 * It needs to pay the monthly expenses of a public bank account.
 * It needs to maintain a secure and publicly available database. 
 * It needs to upkeep a secure (virtual) server running an auditable script.
 * It needs to be independent and fully transparent about its operations. 
-
-
-*There may be legal and regulatory complications. What kind of complications?*
-* Does an AAE need a legal entity? Business or non-profit/foundation? 
-* Will an AAE need to be KYC/AML compliant?
-
 
 *How can the AAE make a profit?* 
 
