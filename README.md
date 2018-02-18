@@ -6,3 +6,16 @@ A molecular swap is a decentralized way of exchanging cryptocurrencies to fiat. 
 Molecular swaps require each party to initiate a transaction. The person transacting crypto pays into a smart contract, while the person who is transacting fiat pays to an Auditable and Automated Escrow (AAE). In order for the molecular swap to start, both parties need to agree on the transacted amount and the exchange rate. This is essential for the success of the swap.
 
 The AAE consists of three elements. 1) A bank account number known to the community, which is registered solely for the purpose of receiving and sending money. 2) A public database that logs the incoming and outgoing transactions. 3) An auditable server with a script that converts incoming transactions into new payments, based on information in their reference.
+
+# Example swap
+Alice wants to buy Decred. She enters into an agreement with Bob. They both agree to exchange 10 DCR for 720 EUR. Alice receives Bob’s bank account number and sends Bob her DCR address. 
+
+Bob starts by sending 10 DCR into a smart contract. It is linked to the DCR address of Alice and contains a unique key. The funds in the contract are locked and can only be redeemed by Alice if she sends her payment to the AAE. When a certain period of time expires after the contract was mined, but not redeemed by Alice, the funds inside the contract will automatically be transferred back to Bob’s wallet. The smart contract monitors the AAE database for the incoming payment of Alice. The smart contract is initiated with two parameters: the bank account of Bob and an amount in euros (720 in this example) to be paid.
+
+Alice then audits the smart contract of Bob. She checks that Bob sent 10 DCR, and obtains the unique key that she will use in her transaction to the AAE. In her transaction, she sends 720 EUR to the AAE, with in the reference two strings: the bank account number of Bob and the key that she obtained from the smart contract. 
+
+When the payment of Alice passes, it shows up in the logs of the AAE database. The unique key that Alice included in the reference activates the smart contract of Bob (which has monitored the AAE database continuously), and the contract will audit the payment using the two parameters. If the amount >720 EUR and if Alice provided the correct bank account in the reference, the smart contract initiates an on-chain transaction of 10 DCR to the DCR address of Alice.
+
+The script on the AAE server uses the unique key to validate that the smart contract initiated the transaction (using the API from dcrdata), to be sure that the contract did not expire. The script then uses the bank account number that Alice provided in the reference to generate a new payment. The transacted amount is the same as the AAE received (if Alice paid more, Bob receives more). In the case that the validation fails, the payment returns to sender.
+
+If everything executed correctly, Alice now has 10 DCR and Bob has 720 EUR in his account. 
