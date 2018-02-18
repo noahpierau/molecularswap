@@ -37,11 +37,14 @@ Since we are talking about a decentralized exchange service, anyone could potent
 
 
 *How can the AAE make a profit?* 
+
 Option 1. It could provide an order-matching website where people can submit requests for molecular swaps. 
 * People could pay to create an account on this website.
 * People could pay the AAE to list a swap request on the website.
+
 Option 2. It could provide a platform to negotiate the molecular swap agreements. 
 * People could pay the AAE if they come to an agreement
+
 Option 3. It could take a certain percentage in fees on the transactions that go through its bank account.
 
 
