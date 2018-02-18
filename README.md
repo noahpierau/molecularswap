@@ -7,7 +7,12 @@ Molecular swaps require each party to initiate a transaction. The person transac
 
 The AAE consists of three elements. 1) A bank account number known to the community, which is registered solely for the purpose of receiving and sending money. 2) A public database that logs the incoming and outgoing transactions. 3) An auditable server with a script that converts incoming transactions into new payments, based on information in their reference.
 
-# Example swap
+The image below provides a visual of the steps each party performs:
+
+<img src="MolecularSwap.PNG" width="75%" />
+
+
+## Example swap
 Alice wants to buy Decred. She enters into an agreement with Bob. They both agree to exchange 10 DCR for 720 EUR. Alice receives Bob’s bank account number and sends Bob her DCR address. 
 
 Bob starts by sending 10 DCR into a smart contract. It is linked to the DCR address of Alice and contains a unique key. The funds in the contract are locked and can only be redeemed by Alice if she sends her payment to the AAE. When a certain period of time expires after the contract was mined, but not redeemed by Alice, the funds inside the contract will automatically be transferred back to Bob’s wallet. The smart contract monitors the AAE database for the incoming payment of Alice. The smart contract is initiated with two parameters: the bank account of Bob and an amount in euros (720 in this example) to be paid.
@@ -20,7 +25,7 @@ The script on the AAE server uses the unique key to validate that the smart cont
 
 If everything executed correctly, Alice now has 10 DCR and Bob has 720 EUR in his account. 
 
-# Open questions
+## Open questions
 Since we are talking about a decentralized exchange service, anyone could potentially set up an AAE. The process of setting it up would be similar to that of setting up a stakepool. The code and requirements would be open-source and available to everyone who wants to contribute or audit. However, before we write code there are some questions to answer.
 
 
